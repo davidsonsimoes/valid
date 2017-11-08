@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Valid</title>
+	<meta name="author" content="Davidson Simoes" />
+	<meta name="description" content="" />
+	<meta name="keywords"  content="" />
+	<meta name="Resource-type" content="Document" />
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+	<style>
+		#intro_home {
+			background: #1b7d96 url(img/bg_intro.png) center no-repeat
+		}
+		.btn-login {
+			color: #ffffff;
+			background-color: #60142e;
+		}
+		#intro_home p {
+			color:#ffffff
+		}
+		header {
+			background-color: #167a94;
+			border-top: 1px solid #096982;
+			border-bottom: 1px solid #096982;
+		}
+		.content-text {
+			background-color: #167a94
+		}
+		.content-text p {
+			color:#ffffff
+		}
+	</style>
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				'menu': '#menu',
+				'verticalCentered': true,
+				'css3': true,
+				'navigation': false,
+				'navigationPosition': 'right',
+				'anchors': ['intro', 'secondPage', '3rdPage'],
+				'afterLoad': function(anchorLink, index){
+					if(index == 2){
+						$('#iphone3, #iphone2, #iphone4').addClass('active');
+					}
+				},
+				'onLeave': function(index, nextIndex, direction){
+					if (index == 1){
+						setTimeout(function() {
+							$.fn.fullpage.setAutoScrolling(false);
+						}, 1000);
+						$('header').addClass('fixed-header');
+						$('#menu').addClass('hide');
+					}
+					if (index == 2 && direction == 'up'){
+						$.fn.fullpage.setAutoScrolling(true);
+						$('header').removeClass('fixed-header');
+						$('#menu').removeClass('hide');
+					}
+				}
+			});
+		});
+		
+	</script>
+
+</head>
+<body>
+<header class="home">
+	<a href="#" class="logo"><img src="img/logo_fixed.gif" alt="" /></a>
+	<a href="#" class="btn-login">Login</a>
+</header>
+<div id="fullpage">
+	<div class="section" id="intro_home">
+		<div class="header_intro">
+				<a href="#"><img src="img/logo.png" alt="" /></a>
+				<a href="#" class="btn-login">Login</a>
+		</div>
+		<p>Este portal foi criado especialmente para você, que faz parte da equipe <strong>VALID</strong>, se conectar com dicas e orientações para cuidar melhor da sua saúde. Uma vida longa e saudável depende dos seus hábitos. Aproveite este espaço e cuide-se cada vez mais!</p>
+		<ul id="menu">
+			<li data-menuanchor="secondPage"><a href="#secondPage" data-menuanchor="secondPage" class="icon_mouse"><img src="img/mouse.png" alt="" />desça a página</a></li>
+		</ul>
+	</div>
+	<div class="section" id="section1">
+		<div class="content_left">
+			<article>
+				<img src="img/logo_2.png" class="logo_2" alt="" />
+			</article>
+			<article style="background: url(img/img1.jpg) center no-repeat;">
+				<div class="content-text moveDown"><p>Que tal começar a cuidar da sua saúde?</p></div>
+			</article>
+		</div>
+		<div class="content_right">
+			<article style="background: url(img/img2.jpg) center no-repeat;"></article>
+			<article style="background: url(img/img3.jpg) center no-repeat;"></article>
+		</div>
+	</div>
+	<div class="section moveDown" id="section2">
+		<article style="background: url(img/bg_01.jpg) center no-repeat;">
+			<div class="align_content">
+				<h1>Apresentação</h1>
+				<h2>Por que esse canal existe?</h2>
+				<hr />
+				<p>“Para a SoEnergy, a saúde dos colaboradores é
+					o nosso bem mais precioso, necessária para que 
+					tenhamos uma vida plena e independente...”<br/>
+					<br/>
+					CEO - Carlos Alberto Rosero Riascos
+					</p>
+			</div>
+		</article>
+		<article style="background-color: #167a94;">
+			<div class="align_content">
+				<h1>Benefícios</h1>
+				<h2>Conheça tudo sobre o  seu plano</h2>
+				<hr />
+				<img src="img/icon_1.png" alt="" />
+				<img src="img/icon_2.png" alt="" />
+				<img src="img/icon_3.png" alt="" />
+				<img src="img/icon_4.png" alt="" />
+				<img src="img/icon_5.png" alt="" />
+				<img src="img/icon_6.png" alt="" />
+				<img src="img/icon_7.png" alt="" />
+				<img src="img/icon_8.png" alt="" />
+			</div>
+		</article>
+		<article>
+			<div class="align_content">
+				<h2>Notícias</h2>
+				<h1>Você está cuidando do seu sono?</h1>
+				<p>Você sabia que quase metade dos brasileiros sofre com distúrbios do sono? Esse problema faz com que nosso país seja o maior consumidor da América Latina de remédios para dormir sem prescrição médica.</p>
+				<a href="#">leia mais</a>
+			</div>
+		</article>
+		<article style="background: url(img/bg_02.jpg) center no-repeat;"></article>
+	</div>
+	<div class="section fp-auto-height" id="section3">
+		<div class="content_left">
+			<article style="background: url(img/img4.jpg) center no-repeat;"></article>
+			<article>
+				<div class="align_content">
+					<h2>Parcerias</h2>
+					<h1>Tudo para seu bem-estar</h1>
+					<a href="#">confira benefícios exclusivos</a>
+				</div>
+			</article>
+		</div>
+		<div class="content_right">
+			<article>
+				<div class="align_content">
+					<h2>Enquete</h2>
+					<h1>Quantas vezes você pratica exercícios físicos?</h1>
+					<a href="#">responda, participe</a>
+				</div>
+			</article>
+			<article style="background: url(img/img5.jpg) center no-repeat;"></article>
+		</div>
+	</div>
+	<div class="section fp-auto-height" id="pre-footer">
+			<div class="content_left">
+				<div class="align-content">
+					<p class="title">Dúvidas, informações!</p>
+					<h2>Fale com o nosso RH</h2>
+					<p>Segunda a sexta-feira <strong>08:00 às 20h00</strong></p>
+				</div>
+			</div>
+			<div class="content_right">
+					<p>Telefone <strong>(21) 3606-9300</strong></p>
+					<p>Formulário <a href="#" class="btn-login">Entrar em Contato</a></p>
+					<p>E-mail <strong>rh@soenergy.com.br</strong></p>
+			</div>
+	</div>
+	<footer class="section fp-auto-height">
+		<a href="#"><img src="img/logo_footer.png" alt="Valid" /></a>
+		<a href="#"><img src="img/logo_footer2.png" alt="Grupo Case" /></a>
+	</footer>
+	<div class="copyright section fp-auto-height">
+		<div class="align_content">
+			<p>© Copyrigth 2017 . Todos os direitos reservados</p>
+			<p>desenvolvido por: <img src="img/logo_kinda.png" alt="" /></p>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
