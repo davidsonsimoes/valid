@@ -638,7 +638,7 @@ ul#menu li > a {
 }
 .page-title {
 	min-height: 135px;
-	background: #1b7d96 url(img/pattern-title-page.png) no-repeat center;
+	background: #1b7d96 url(../img/pattern-title-page.png) no-repeat center;
 }
 .page-title .align-content {
 	height: 135px;
@@ -768,7 +768,7 @@ table tbody tr td.space {
 	background-color: #efeeee;
 }
 ul.list_2 li {
-	background: url(img/list2.png) no-repeat left top;
+	background: url(../img/list2.png) no-repeat left top;
 	padding-left: 20px;
 	margin-bottom: 30px
 }
@@ -777,7 +777,7 @@ ul.list_2 li.col {
 	display: inline-block;
 }
 ul.list li {
-	background: url(img/list.png) no-repeat left center;
+	background: url(../img/list.png) no-repeat left center;
 	padding-left: 20px;
 	margin-bottom: 10px
 }
