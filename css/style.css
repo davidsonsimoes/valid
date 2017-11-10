@@ -767,9 +767,11 @@ table tbody tr td {
 table tbody tr td.space {
 	background-color: #efeeee;
 }
+ul li .fa-circle {
+	color: #60142e
+}
 ul.list_2 li {
-	background: url(../img/list2.png) no-repeat left top;
-	padding-left: 20px;
+	padding-left: 0;
 	margin-bottom: 30px
 }
 ul.list_2 li.col {
