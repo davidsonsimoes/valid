@@ -53,6 +53,9 @@ body{
 	color: #333;
 	color: rgba(0,0,0,0.5);
 }
+body.ptop{
+padding-top: 56px
+}
 .wrap{
 	margin-left: auto;
 	margin-right: auto;
@@ -76,6 +79,73 @@ p{
 
 #menu{
 	
+}
+.box-header-page .align-content,
+.box-content-page .align-content {
+	width: 100%;
+	max-width: 1140px;
+	margin: 0 auto;
+	padding-top: 50px
+}
+.box-content-page .align-content {
+	padding-bottom: 100px
+}
+.box-header-page .align-content h1 {
+	font-size: 33px;
+	margin-bottom: 15px
+}
+.box-header-page .align-content p,
+.box-content-page .align-content p {
+	font-size: 18px;
+	font-weight: 100
+}
+.box-login {
+	background-color: #efeeee;
+    max-width: 725px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px 50px 50px 50px;
+    box-sizing: border-box;
+    position: relative;
+}
+.box-login label {
+	font-weight: 600;
+	font-size: 15px;
+}
+.box-login input {
+	width: 100%;
+	line-height: 28px;
+	margin: 5px 0 0 0;
+}
+.box-login textarea{
+	width: 100%;
+	line-height: 28px;
+	margin: 5px 0 0 0;
+	display: block;
+	min-height: 100px;
+	border:1px solid #c4c3c3
+}
+.box-login .button {
+	background-color: #60142e;
+	color: #ffffff;
+	padding: 4px 10px;
+	position: absolute;
+	left: 50%;
+	bottom: -15px;
+	width: 80px;
+	margin-left: -40px;
+	font-size: 18px
+}
+.box-login .obrigatorio {
+	font-weight: 100;
+	font-size: 12px;
+	float: right;
+	padding-top: 5px
+}
+label span {
+	font-weight: 100;
+	font-size: 12px;
+	padding-left: 10px
 }
 .twitter-share-button{
 	position: fixed;
@@ -489,6 +559,87 @@ background: #AAA;
 	font-size: 16px;
 	background-color: #60142e;
 	color: #ffffff;
+	border: 0;
+	cursor: pointer
+}
+.btn.sair {
+	float: right;
+	max-width: 80px;
+	width: 100%
+}
+.welcome-text {
+	padding-top: 15px
+}
+.welcome-text a {
+	margin-left: 15px;
+	font-size: 14px;
+	text-decoration: underline
+}
+.box {
+	background-color: #efeeee;
+	border: 1px solid #e4e4e4;
+	padding: 20px;
+	box-sizing: border-box
+}
+.account .box p {
+	color: #000000;
+	font-weight: 100;
+	font-size: 14px;
+	line-height: 18px;
+	margin: 10px 0;
+	text-transform: uppercase
+}
+.account .box p strong {
+	color: #063895;
+	font-weight: 600;
+	display: block
+}
+.account h2 {
+	font-size: 18px;
+	font-weight: 600
+}
+
+#years, #months, #posts{
+    cursor:pointer;
+}
+.archive_year {
+margin-left: 1em;
+font-size: large;
+font-weight: bold;
+cursor: pointer;
+}
+.archive_month {
+margin-left: 1em;
+margin-top: 0;
+margin-bottom: 1em;
+list-style-type: circle;
+font-size: medium;
+cursor: pointer;
+}
+.archive_posts {
+margin-left: 1em;
+margin-top: 0;
+margin-bottom: 1em;
+list-style: square url('http://www.webbossuk.com/admin/images/reply-arrow.png');
+font-weight: normal;
+cursor: pointer;
+}
+ul.faq .fa {
+	width: 20px
+}
+ul.faq > li {
+	margin-bottom: 15px;
+	font-size: 18px;
+	cursor: pointer
+}
+ul.faq > li {
+	margin-bottom: 15px;
+	font-size: 18px;
+	font-weight: 600;
+}
+ul.faq li.itens ul li {
+	font-weight: 100;
+	font-size: 14px;
 }
 .box-download {
 	text-align: center
@@ -510,7 +661,7 @@ hr {
 #intro_home p {
 	width: 100%;
 	max-width: 940px;
-	margin: 10% auto;
+	margin: 8% auto;
 	font-size: 48px;
 	letter-spacing: -2px;
 	text-align: left;
@@ -592,7 +743,8 @@ header.fixed-header {
 	top: 0;
 	left: 0;
 	z-index:10;
-	display: block
+	display: block;
+	width: 100%
 }
 header {
 	min-height: 56px;
@@ -616,20 +768,104 @@ header .align-content .btn-login {
 	float: right;
 	margin: 12px 0 0 0;
 }
+ul#menu {
+	font-size: 0;
+	margin-bottom: -10px
+}
+ul#menu li {
+	font-size: 16px
+}
 ul#menu,
 ul#menu > li {
 	text-align: center;
-	display: inline-block
+	display: inline-block;
+	border: 0!important
 }
 ul#menu > li {
-	border-right: 1px solid #60142e;
-	padding-right: 15px;
-	margin-right: 15px;
-	line-height: 14px
+	line-height: 14px;
+	position: relative;
+	margin-right: -4px;
 }
+ul#menu > li > a {
+	line-height: 14px;
+}
+ul#menu > li a {
+	line-height: 14px;
+	position: relative;
+	line-height: 56px;
+	display: inline-block;
+	padding: 0 20px
+}
+ul#menu > li > a:hover,
+ul#menu > li:hover {
+	background-color: #60142e;
+}
+ul#menu > li ul {
+	display: none;
+    position: absolute;
+    left: 50%;
+    top: 56px;
+    width: 200px;
+    margin-left: -100px;
+}
+ul#menu > li ul li a {
+	background-color: #60142e;
+}
+ul#menu > li > a::after {
+	content: ' |';
+	color:#60142e;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+ul#menu li:last-child > a::after {
+	content: '';
+}
+ul#menu > li:hover > ul {
+	display: block
+}
+ul#menu > li ul li {
+	text-align: left;
+	position: relative
+}
+ul#menu > li ul li a,
+ul#menu > li ul li {
+	display: block;
+	line-height: 40px;
+	text-align: center;
+}
+ul#menu > li ul li ul {
+	position: absolute;
+	left: 200px;
+	top:0;
+	margin-left: 0
+}
+ul#menu > li ul li:hover a,
+ul#menu > li ul li a:hover {
+	background-color: #550c25
+}
+ul#menu > li ul li:hover ul {
+	display: block;
+	position: absolute;
+	left: 200px;
+	top:0;
+	margin-left: 0
+}
+ul#menu > li ul li:hover ul li a {
+	background-color: #550c25
+}
+
+ul#menu > li ul li:hover ul li:first-child a::before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f105";
+	position: absolute;
+	left: -15px;
+	top: 12px;
+	color:#d5ac23
+}
+
 ul#menu > li:last-child {
 	border-right: none;
-	padding-right: 0;
 	margin-right: 0
 }
 ul#menu li > a {
@@ -661,11 +897,16 @@ ul#menu li > a {
 .content-page {
 	min-height: 400px;
 	position: relative;
-	overflow: auto;
+}
+.content-page::after {
+	content: "";
+	display: table;
+	clear: both;
 }
 .content-page .content_left,
 .content-page .content_right {
 	width: 50%;
+	overflow: hidden
 }
 .content-page .content_left {
 	float: left
@@ -1001,13 +1242,10 @@ footer a {
 }
 
 
-
-
 .header_intro {
-	width: 80%;
-	position: absolute;
-	top: 50px;
-	left: 10%;
+    width: 100%;
+    position: static;
+    padding-top: 10px;
 }
 
 /* 
