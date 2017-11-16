@@ -134,7 +134,8 @@ p{
 	bottom: -15px;
 	width: 80px;
 	margin-left: -40px;
-	font-size: 18px
+	font-size: 18px;
+	border: none;
 }
 .box-login .obrigatorio {
 	font-weight: 100;
@@ -306,8 +307,9 @@ color: #808080;
 font-size: 1.2em;
 line-height: 1.6em;
 }
-
-
+.menu-burger {
+	display: none
+}
 
 
 /* Section 0
@@ -320,10 +322,85 @@ height: 100%;
 margin: 40px 0 0 0;
 }
 
-
+.noticias .row {
+	margin-right: 0;
+    margin-left: 0;
+}
+.image-noticias {
+	width: 100%
+}
+.noticias {
+	padding-bottom: 100px
+}
+.noticias .align-content {
+	max-width: 435px;
+	width: 100%;
+	margin-bottom: 0;
+	padding-bottom: 0
+}
+.noticias .align-content h1 {
+	font-size: 30px;
+	letter-spacing: -1px;
+	margin-bottom: 15px;
+}
+.noticias .align-content p {
+	margin-bottom: 15px;
+}
+.noticias .row > div {
+	padding-left: 0;
+	padding-right: 0
+}
+.noticias .align-content .title {
+	font-size: 18px;
+	border-bottom: 2px solid #000000;
+	padding-bottom: 5px;
+	margin-bottom: 15px;
+	display: inline-block
+}
+.noticias .left .align-content {
+	float: left;
+	margin: 0 0 0 10%
+}
+.noticias .right .align-content {
+	float: right;
+	margin: 0 10% 0 0
+}
+.noticias.interna .align-content {
+	margin: 0 30px 0 0;
+	max-width: 535px;
+}
+.box-share {
+	text-align: center;
+	font-size: 14px;
+	padding: 20px 0
+}
+.box-share p {
+	font-size: 17px;
+	padding-bottom: 10px
+}
+.box-share ul li {
+	display: inline-block;
+	padding: 5px
+}
 article h1 {
 	letter-spacing: -1px;
 	line-height: 27px
+}
+.page-navigation {
+	margin: 40px auto;
+	display: block;
+	width: 300px;
+	text-align: center
+}
+.page-navigation li {
+	display: inline-block;
+	padding: 0 5px
+}
+.page-navigation li .active {
+	color:#bfbdbd
+}
+.page-navigation li a {
+	color: #000000
 }
 
 #section1 article,
@@ -770,7 +847,8 @@ header .align-content .btn-login {
 }
 ul#menu {
 	font-size: 0;
-	margin-bottom: -10px
+	margin-bottom: -10px;
+	height: 56px
 }
 ul#menu li {
 	font-size: 16px
@@ -796,8 +874,7 @@ ul#menu > li a {
 	display: inline-block;
 	padding: 0 20px
 }
-ul#menu > li > a:hover,
-ul#menu > li:hover {
+ul#menu > li > a:hover{
 	background-color: #60142e;
 }
 ul#menu > li ul {
@@ -817,6 +894,7 @@ ul#menu > li > a::after {
 	position: absolute;
 	right: 0;
 	top: 0;
+	height: 0
 }
 ul#menu li:last-child > a::after {
 	content: '';
@@ -906,7 +984,8 @@ ul#menu li > a {
 .content-page .content_left,
 .content-page .content_right {
 	width: 50%;
-	overflow: hidden
+	overflow: hidden;
+	position: static
 }
 .content-page .content_left {
 	float: left
@@ -1241,6 +1320,11 @@ footer a {
 	float: left
 }
 
+#intro_home ul#menu > li > a,
+#intro_home ul#menu > li,
+#intro_home ul#menu {
+	background: none!important
+}
 
 .header_intro {
     width: 100%;
@@ -1248,10 +1332,25 @@ footer a {
     padding-top: 10px;
 }
 
-/* 
-	Pra dispositivos que tem uma largura mínima de 768 pixels. Tablets, por exemplo.
-*/
-@media only screen and (min-width: 769px) and (max-width: 1279px){ 
+
+.menu-burger span {
+	background-color: #ffffff;
+	display: block;
+	height: 3px;
+	margin-bottom: 3px
+}
+.menu-burger {
+    width: 22px;
+    height: 14px;
+    display: none;
+    position: absolute;
+    left: 50%;
+    margin-left: -11px;
+    top: 19px;
+}
+
+/* ExtraSmall devices (tablets, 767px and down) */
+@media (max-width: 767px) {
 	.header_intro {
 		width: 80%;
 		position: absolute;
@@ -1288,18 +1387,345 @@ footer a {
 	#section2 article:nth-child(3) .align_content {
 		padding: 30% 10% 10% 10%;
 	}
+	header .align-content {
+		padding: 0 20px;
+		box-sizing: border-box;
+	}
+	.page-title {
+		height: 90px;
+		overflow: hidden;
+		line-height: 90px;
+		min-height: 90px;
+		text-align: center;
+	}
+	.page-title .align-content {
+	    height: 90px;
+	    line-height: 116px
+	}
+	.page-title .welcome {
+		display: none;
+	}
+	.box-header-page .align-content h1 {
+		font-size: 28px;
+	}
+	.box-header-page .align-content p, .box-content-page .align-content p {
+	    font-size: 16px;
+	    font-weight: 100;
+	}
+	.box-header-page .align-content, .box-content-page .align-content {
+	    padding: 20px;
+	    box-sizing: border-box;
+	}
+	.box-login .col-xs-12 {
+	    margin-bottom: 20px;
+	}
+	.box-login {
+	    padding: 20px;
+	    margin-bottom: 60px;
+	}
+	#pre-footer .content_left,
+	#pre-footer .content_right {
+	    width: 100%;
+	    float: none;
+	    padding: 20px;
+	    box-sizing: border-box;
+	    position: static;
+	}
+	#pre-footer .content_right p {
+		width: 100%
+	}
+	#pre-footer {
+	    text-align: center;
+	}
+	#pre-footer .content_right a.btn-login {
+	    float: none;
+	    display: block;
+	    position: relative;
+	    font-size: 13px;
+	    text-align: center;
+	    max-width: 140px;
+	    margin: 5px auto;
+	}
+	#pre-footer .content_left p.title {
+	    font-size: 26px;
+	}
+	#pre-footer strong {
+	    font-size: 20px;
+	}
+	footer a img {
+    	width: 83px;	
+	}
+	footer a:first-child img {
+		width: 103px;		
+	}
+	.copyright p {
+	    font-size: 11px;
+	    color: #3d3d3d;
+	    float: none!important;
+	    display: block;
+	    line-height: 40px;
+	}
+
+	#intro_home #menu {
+		display: block!important;
+		position: absolute;
+	    width: 130px;
+	    margin-left: -65px;
+	    left: 50%;
+	    bottom: 0;
+	}
+	.box .row {
+		padding: 0 20px;		
+	}
+	.box .row .col-xs-12 {
+		padding-left: 0
+	}
+	.account .col-xs-12.col-sm-4 {
+		margin-bottom: 30px
+	}
+	#intro_home p {
+	    width: 100%;
+	    font-size: 18px;
+	    line-height: 27px;
+	    letter-spacing: 0;
+	    box-sizing: border-box;
+	    padding: 0 20px;
+	    text-align: center;
+	}
+	.header_intro {
+	    width: 100%;
+	    position: absolute;
+	    top: 30px;
+	    left: 0;
+	    box-sizing: border-box;
+	    padding: 0 20px;
+	}
+	.header_intro img {
+		max-width: 120px
+	}
+	.btn-login {
+	    float: right;
+	    display: inline-block;
+	    line-height: 31px;
+	    padding: 0 10px;
+	    font-size: 12px;
+	}
+	ul#menu > li a {
+	    line-height: 14px;
+	    position: relative;
+	    line-height: 16px;
+	    display: inline-block;
+	    padding: 0;
+	    font-size: 12px;
+	}
+	.content-text p {
+	    font-size: 18px;
+	    text-align: center;
+	}
+	.content-text {
+	    height: 100px;
+	    line-height: 100px;
+	}
+	#section2 article {
+	    position: static;
+	    background-size: cover;
+	    text-align: center;
+	    width: 100%;
+	    box-sizing: border-box;
+	    padding: 20px;
+	    height: auto;
+	}
+	#section2 .align_content, #section2 article:nth-child(3) .align_content {
+	    padding: 20px;
+	    text-align: center;
+	}
+	#section2 article h1 {
+	    font-size: 33px;
+	    text-align: center;
+	    margin-bottom: 15px;
+	}
+	.content_left,
+	.content_right {
+	    float: none;
+	    width: 100%!important;
+	    height: auto;
+	    z-index: 3;
+	    position: relative;
+	}
+	#section2 article:nth-child(4) {
+	    display: none;
+	}
+	#section1 .content_left article:last-child {
+	    height: 400px;
+	    margin-top: 60px;
+	}
+	.logo_2 {
+	    margin-top: 60px;
+	}
+	.content-page .content_left,
+	.content-page .content_right {
+	    float: none;
+	    width: 100%!important;
+	    box-sizing: border-box;
+	    padding: 20px;
+	}
+	.sobre_a_sulamerica .content_left .content_text, .o_que_mudou .content_left .content_text {
+	    float: none;
+	    margin-right: 0;
+	}
+	ul.list_2 li.col {
+	    width: 100%;
+	    display: inline-block;
+	}
+	.sobre_a_sulamerica .content_right .content_text {
+	    width: 100%;
+	    margin-left: 0;
+	}
+	.sobre_a_sulamerica .content_left .content_text, .o_que_mudou .content_left .content_text {
+		padding-left: 0!important
+	}
+}
+@media (max-width: 560px) {
+
 }
 
-/* 
-Com uma largura mínima de 992 pixels. Monitores por exemplo.
-*/
-@media screen and (min-width: 992px) {
+@media (max-width: 1024px) {
+	.menu-burger {
+		display: block
+	}
+	ul#menu {
+		position: absolute;
+		width: 100%;
+		left: 0;
+		top: 56px;
+		display: none
+	}
+	ul#menu > li {
+		border-right: 1px solid #000000;
+		display: block;
+	}
+	ul#menu > li > a {
+		display: block;
+		padding: 13px 20px 2px 20px;
+		font-size: 16px;
+		background-color: #323232;
+		text-align: left;
+	}
+	ul#menu > li a::after {
+		content: '';
+		display: block;
+		height: 1px;
+		background-color: #ffffff;
+		color: #ffffff;
+		position: static;
+		width: 80px;
+		margin-top: 20px;
+	}
+	ul#menu > li:last-child a::after {
+		content: none;
+	}
+	ul#menu > li:last-child a {
+		padding-bottom: 30px
+	}	
+	ul#menu > li ul {
+		display: block;
+		position: static;
+		left: 0;
+		top: 0;
+		width: 100%;
+		margin-left: 0;
+		text-align: left;
+		margin-top: -6px
+	}
 	
+	ul#menu > li ul li a, ul#menu > li ul li {
+		display: block;
+		line-height: 30px;
+		text-align: left;
+		font-size: 16px
+	}
+	ul#menu > li ul li a {
+		background-color: #00bbee;
+		padding-left: 40px;
+		margin: -1px 0;
+		height: 45px;
+		line-height: 45px;
+	}
+	ul#menu > li ul li ul {
+		position: static;
+		left: 0;
+		top: 0;
+		margin-left: 0;
+	}
+	ul#menu > li ul li ul li a {
+		padding-left: 80px;
+	}
+	.content-page > .align-content {
+		padding: 0 20px;
+		box-sizing: border-box;
+	}
+	#intro_home ul#menu, #intro_home ul#menu > li, #intro_home ul#menu > li a{
+		background: transparent!important
+	}
+	#intro_home ul#menu {
+		top: auto
+	}
+	#intro_home ul#menu li a {
+		padding: 0
+	}
+	header .align-content,
+	.page-title .align-content,
+	.box-header-page .align-content, 
+	.box-content-page .align-content,
+	.noticias.interna .align-content {
+		padding: 0 20px;
+		box-sizing: border-box
+	}
+	.box-header-page .align-content {
+		padding: 20px 30px;
+	}
+	.noticias.interna .align-content {
+		margin: 0 10px 0 0;
+		max-width: -webkit-fill-available;
+	}
+	#pre-footer .content_left {
+		padding: 85px 0 0 20px;
+	}
+	#pre-footer .content_left p.title {
+		font-size: 26px;
+	}
+	.noticias .left .align-content,
+	.noticias .right .align-content {
+		margin: 20px 0
+	}
+	.box-content-page .align-content {
+		margin-bottom: 50px
+	}
+	.sobre_a_sulamerica .content_left .content_text, .o_que_mudou .content_left .content_text {
+		width: 100%;
+		max-width: -webkit-fill-available;
+		float: none;
+		margin-bottom: 30px;
+		margin-right: 20px;
+		padding-left: 20px;
+		box-sizing: border-box;
+	}
+	.sobre_a_sulamerica .content_right .content_text {
+		width: 100%;
+		margin-left: 0;
+		padding: 0 20px;
+		box-sizing: border-box;
+	}
 }
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
 
-/* 
-Dispositivos com largura mínima de 1200 pixels. Por exemplo TVs.
-*/
-@media screen and (min-width: 1200px) {
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+}
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
 
 }
